@@ -2,10 +2,7 @@ console.log("Задание 5");
 
 const checkForSpam = function(message) {
   const messageNormalizerArray = message.toLowerCase();
-  if(messageNormalizerArray.includes('spam') || messageNormalizerArray.includes('sale')){
-    return true;
-  }
-  return false;
+  return messageNormalizerArray.includes('spam') || messageNormalizerArray.includes('sale');
   };
   
   /*
