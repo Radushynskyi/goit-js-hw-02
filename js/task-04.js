@@ -1,23 +1,31 @@
 console.log("Задание 4");
 
-const credits = 23580;
-const pricePerDroid = 3000;
-let totalPrice = 0;
-const countDroid = prompt("Какое количество дроидов Вы хотите приобрести ?");
-
-if (countDroid === null) {
-    console.log('Отменено пользователем!');
-} else if(!isNaN(countDroid)) {
-    totalPrice = pricePerDroid * countDroid;
-
-    if (totalPrice > credits) {
-        console.log('Недостаточно средств на счету!');
-    } else {
-        console.log(`Вы купили ${countDroid} дроидов, на счету осталось ${credits-totalPrice} кредитов.`);
+const formatString = function(string) {
+    if(string.length > 40){
+        const sliceString = `${string.slice(0, 39)}...`;
+        return sliceString;
     }
-} else {
-    console.log('Неверно введено количество!');
-}
+    return string;
+  };
+  
+  /*
+   * Вызовы функции для проверки работоспособности твоей реализации.
+   */
+  console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+  // вернется оригинальная строка
+  
+  console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+  // вернется форматированная строка
+  
+  console.log(formatString('Curabitur ligula sapien.'));
+  // вернется оригинальная строка
+  
+  console.log(
+    formatString(
+      'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+    ),
+  );
+  // вернется форматированная строка
 
 
 console.log("--------------");

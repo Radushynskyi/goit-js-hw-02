@@ -1,11 +1,16 @@
 console.log("Задание 1");
 
-const name = 'Генератор защитного поля';
-let prise = 1000;
-
-console.log(`Выбран ${name}, цена за штуку ${prise} кредитов`);
-
-prise = 2000;
-console.log(`Выбран ${name}, цена за штуку ${prise} кредитов`);
+const logItems = function(array) {
+    for (let i = 0; i < array.length; i += 1) {
+        console.log(`${i+1} - ${array[i]}`);
+      }
+  };
+  
+  /*
+   * Вызовы функции для проверки работоспособности твоей реализации.
+   */
+  logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+  
+  logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
 console.log("--------------");
